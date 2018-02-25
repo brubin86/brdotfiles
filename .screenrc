@@ -1,0 +1,18 @@
+hardstatus alwayslastline "%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+b yk} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]"
+#huge scrollback buffer
+defscrollback 50000
+escape ^Jj
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5%dm'
+defbce on
+nethack on
+layout new
+split -v
+split
+screen 0
+focus next
+screen 1
+focus bottom 
+screen 2
+layout save default
+

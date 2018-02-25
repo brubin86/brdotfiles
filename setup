@@ -1,0 +1,23 @@
+#!/bin/bash
+
+mkdir -p ~/.vim
+
+cp .*rc ~/
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+vim +PluginInstall +qall
+
+cat << EOF >> ~/.bashrc
+
+sls(){
+
+	if [ -z "$1" ]; then
+    	screen -ls
+    else
+    	screen -d -R "$1"
+
+    fi
+}
+
+EOF
